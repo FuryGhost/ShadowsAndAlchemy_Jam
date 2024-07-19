@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://qmor1vpqir5m"]
 
 [node name="Main" type="Node"]
+
+[node name="TestButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.0
+offset_top = -106.5
+offset_right = 183.0
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Test Button"
