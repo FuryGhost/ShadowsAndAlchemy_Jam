@@ -12,9 +12,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("click"):
+	if Input.is_action_just_pressed("click"):
 		_set_cursor(closed_hand_cursor)
-	else:
+	elif Input.is_action_just_released("click"):
 		_set_cursor(open_hand_cursor)
 
 
