@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://beeqb3debqxk3"]
+
+[ext_resource type="Texture2D" uid="uid://ccxmlrfwmswyf" path="res://art/containers/Container_1.png" id="1_0wbu2"]
+[ext_resource type="Script" path="res://scenes/selected_container.gd" id="1_nmwbw"]
+
+[sub_resource type="Curve2D" id="Curve2D_t2mpi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 951, 476, 0, 0, 0, 0, 1016, 455, 0, 0, 0, 0, 926, 527, 0, 0, 0, 0, 986, 425, 0, 0, 0, 0, 878, 490, 0, 0, 0, 0, 949, 476)
+}
+point_count = 6
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j5q70"]
+radius = 202.188
+height = 657.902
+
+[node name="SelectedContainer" type="Node2D"]
+script = ExtResource("1_nmwbw")
+
+[node name="ContainerImage" type="Sprite2D" parent="."]
+position = Vector2(895, 487)
+texture = ExtResource("1_0wbu2")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-50, -27)
+curve = SubResource("Curve2D_t2mpi")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(951, 476)
+rotation = -0.312492
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(883, 489)
+rotation = -0.523598
+shape = SubResource("CapsuleShape2D_j5q70")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

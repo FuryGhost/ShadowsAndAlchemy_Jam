@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=4 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="Texture2D" uid="uid://bdx56be2n6jnn" path="res://art/Cauldron.png" id="2_l8hjc"]
+[ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
 
 [node name="Cauldron" type="Sprite2D" parent="."]
-position = Vector2(977, 1027)
+position = Vector2(981, 1120)
 texture = ExtResource("2_l8hjc")
+
+[node name="SelectedContainer" parent="." instance=ExtResource("3_iod7s")]
