@@ -2,8 +2,8 @@ extends Node
 
 const cursor_center: Vector2 = Vector2(32, 32)
 
-@onready var open_hand_cursor: Resource = preload("res://art/cursor/OpenHandCursor.png")
-@onready var closed_hand_cursor: Resource = preload("res://art/cursor/ClosedHandCursor.png")
+@onready var open_hand_cursor: Resource = preload("res://art/cursor/OpenHandCursor_small.png")
+@onready var closed_hand_cursor: Resource = preload("res://art/cursor/ClosedHandCursor_small.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
