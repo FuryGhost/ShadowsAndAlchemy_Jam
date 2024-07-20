@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=3 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
+[ext_resource type="Texture2D" uid="uid://bdx56be2n6jnn" path="res://art/Cauldron.png" id="2_l8hjc"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
+
+[node name="Cauldron" type="Sprite2D" parent="."]
+position = Vector2(977, 1027)
+texture = ExtResource("2_l8hjc")
