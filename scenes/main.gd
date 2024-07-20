@@ -1,6 +1,6 @@
 extends Node
 
-const cursor_center: Vector2 = Vector2(32, 32)
+const cursor_center: Vector2 = Vector2(16, 16)
 
 @onready var open_hand_cursor: Resource = preload("res://art/cursor/OpenHandCursor_small.png")
 @onready var closed_hand_cursor: Resource = preload("res://art/cursor/ClosedHandCursor_small.png")
