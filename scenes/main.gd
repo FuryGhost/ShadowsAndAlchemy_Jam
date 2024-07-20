@@ -15,8 +15,10 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("click"):
 		_set_cursor(closed_hand_cursor)
+		$ColorRectClick.color = Color("1a86e2")
 	elif Input.is_action_just_released("click"):
 		_set_cursor(open_hand_cursor)
+		$ColorRectClick.color = Color("b2740f")
 
 
 func _set_cursor(cursor: Resource):
