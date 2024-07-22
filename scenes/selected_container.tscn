@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://beeqb3debqxk3"]
+[gd_scene load_steps=6 format=3 uid="uid://beeqb3debqxk3"]
 
 [ext_resource type="Texture2D" uid="uid://ccxmlrfwmswyf" path="res://art/containers/Container_1.png" id="1_0wbu2"]
 [ext_resource type="Script" path="res://scenes/selected_container.gd" id="1_nmwbw"]
+[ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/single coin in glass jar electric.wav" id="3_1ma7j"]
 
 [sub_resource type="Curve2D" id="Curve2D_t2mpi"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 951, 476, 0, 0, 0, 0, 1016, 455, 0, 0, 0, 0, 926, 527, 0, 0, 0, 0, 986, 425, 0, 0, 0, 0, 878, 490, 0, 0, 0, 0, 949, 476)
+"points": PackedVector2Array(0, 0, 0, 0, 927, 484.319, 0, 0, 0, 0, 972, 453.936, 0, 0, 0, 0, 846, 524.83, 0, 0, 0, 0, 972, 419.936, 0, 0, 0, 0, 815, 498.064, 0, 0, 0, 0, 984, 484.319, 0, 0, 0, 0, 864, 552.319, 0, 0, 0, 0, 927, 484.319)
 }
-point_count = 6
+point_count = 8
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j5q70"]
 radius = 202.188
@@ -21,12 +22,13 @@ position = Vector2(895, 487)
 texture = ExtResource("1_0wbu2")
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(-50, -27)
+position = Vector2(-50, -228.5)
+scale = Vector2(1, 1.38235)
 curve = SubResource("Curve2D_t2mpi")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(951, 476)
-rotation = -0.312492
+position = Vector2(927, 484.319)
+rotation = -0.593872
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -34,5 +36,8 @@ rotation = -0.312492
 position = Vector2(883, 489)
 rotation = -0.523598
 shape = SubResource("CapsuleShape2D_j5q70")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1ma7j")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
