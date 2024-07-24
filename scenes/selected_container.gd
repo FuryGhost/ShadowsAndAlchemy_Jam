@@ -1,6 +1,8 @@
 extends Node2D
 
-var shake_container = false;
+signal hide
+
+var shake_container = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,3 +26,12 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed && !shake_container:
 		shake_container = true;
 		$AudioStreamPlayer2D.play()
+
+
+func _on_back_arrow_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton && event.pressed:
+		hide.emit()
+
+
+func set_container_index(index: int):
+	print(index)

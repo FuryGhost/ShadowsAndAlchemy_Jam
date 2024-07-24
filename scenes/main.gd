@@ -8,6 +8,7 @@ const cursor_center: Vector2 = Vector2(16, 16)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_set_cursor(open_hand_cursor)
+	$SelectedContainer.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,3 +21,14 @@ func _process(delta):
 
 func _set_cursor(cursor: Resource):
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, cursor_center)
+
+
+func _on_container_on_table_container_selected(index):
+	$SelectedContainer.set_container_index(index)
+	$ContainersOnTable.hide()
+	$SelectedContainer.show()
+
+
+func _on_selected_container_hide():
+	$SelectedContainer.hide()
+	$ContainersOnTable.show()

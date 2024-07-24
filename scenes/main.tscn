@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=5 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="Texture2D" uid="uid://bdx56be2n6jnn" path="res://art/Cauldron.png" id="2_l8hjc"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
+[ext_resource type="PackedScene" uid="uid://qv8tgnmqw4af" path="res://scenes/container_on_table.tscn" id="4_1ldp7"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -12,3 +13,11 @@ position = Vector2(981, 1120)
 texture = ExtResource("2_l8hjc")
 
 [node name="SelectedContainer" parent="." instance=ExtResource("3_iod7s")]
+
+[node name="ContainersOnTable" type="Node2D" parent="."]
+
+[node name="Container1" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(116, 115)
+
+[connection signal="hide" from="SelectedContainer" to="." method="_on_selected_container_hide"]
+[connection signal="container_selected" from="ContainersOnTable/Container1" to="." method="_on_container_on_table_container_selected"]
