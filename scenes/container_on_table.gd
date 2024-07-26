@@ -17,7 +17,6 @@ func _process(delta):
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
-		print("clicked")
 		container_selected.emit(container_index)
 
 

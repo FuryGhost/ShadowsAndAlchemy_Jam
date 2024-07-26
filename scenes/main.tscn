@@ -13,11 +13,17 @@ position = Vector2(981, 1120)
 texture = ExtResource("2_l8hjc")
 
 [node name="SelectedContainer" parent="." instance=ExtResource("3_iod7s")]
+visible = false
 
 [node name="ContainersOnTable" type="Node2D" parent="."]
 
 [node name="Container1" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(116, 115)
+position = Vector2(697, 508)
+
+[node name="Container2" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(1065, 391)
+container_index = 2
 
 [connection signal="hide" from="SelectedContainer" to="." method="_on_selected_container_hide"]
 [connection signal="container_selected" from="ContainersOnTable/Container1" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container2" to="." method="_on_container_on_table_container_selected"]
