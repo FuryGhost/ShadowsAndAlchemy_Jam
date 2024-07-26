@@ -20,6 +20,7 @@ func _process(delta):
 	else:
 		shake_container = false
 		$Path2D/PathFollow2D.progress = 0
+		$ContainerImage.position = $Path2D/PathFollow2D.position
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
@@ -30,7 +31,11 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 
 func _on_back_arrow_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
+		$AudioStreamPlayer2D.stop()
 		hide.emit()
+		shake_container = false
+		$Path2D/PathFollow2D.progress = 0
+		$ContainerImage.position = $Path2D/PathFollow2D.position
 
 
 func set_container_index(index: int):
