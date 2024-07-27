@@ -24,7 +24,7 @@ func _set_cursor(cursor: Resource):
 
 
 func _on_container_on_table_container_selected(index):
-	$SelectedContainer.set_container_index(index)
+	$SelectedContainer.set_container(index)
 	$ContainersOnTable.hide()
 	$SelectedContainer.show()
 

@@ -43,5 +43,5 @@ func _on_back_arrow_input_event(viewport, event, shape_idx):
 		$ContainerImage.position = $Path2D/PathFollow2D.position
 
 
-func set_container_index(index: int):
+func set_container(index: int):
 	$AudioStreamPlayer2D.stream = CONTAINER_SOUNDS[index]
