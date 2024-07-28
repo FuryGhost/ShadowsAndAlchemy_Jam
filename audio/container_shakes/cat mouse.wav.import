@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3b06ilm2u7h8"
+path="res://.godot/imported/cat mouse.wav-308e24bc9463b8d823b4be8c629fd1d1.sample"
+
+[deps]
+
+source_file="res://audio/container_shakes/cat mouse.wav"
+dest_files=["res://.godot/imported/cat mouse.wav-308e24bc9463b8d823b4be8c629fd1d1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

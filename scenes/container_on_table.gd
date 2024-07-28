@@ -8,7 +8,8 @@ signal container_selected(index: int, sound: Resource)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$UpArrow.hide()
+	#$UpArrow.hide()
+	$UpArrow.modulate.a = 0.3
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,8 +23,8 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 
 
 func _on_area_2d_mouse_entered():
-	$UpArrow.show()
+	$UpArrow.modulate.a = 1
 
 
 func _on_area_2d_mouse_exited():
-	$UpArrow.hide()
+	$UpArrow.modulate.a = 0.3

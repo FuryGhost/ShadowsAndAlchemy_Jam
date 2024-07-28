@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=17 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
@@ -6,7 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://c23yvb2ggl0qf" path="res://scenes/cauldron.tscn" id="4_ivklr"]
 [ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/single coin in glass jar electric.wav" id="5_v14fl"]
 [ext_resource type="AudioStream" uid="uid://jkj3e2hxlumf" path="res://audio/container_shakes/fava can.wav" id="6_bc85i"]
+[ext_resource type="AudioStream" uid="uid://bk74kf2g8567b" path="res://audio/container_shakes/cat mouse in glass jar.wav" id="7_k6wrs"]
 [ext_resource type="Texture2D" uid="uid://b2y1r4yjmy2le" path="res://art/Light.png" id="7_wlnhj"]
+[ext_resource type="AudioStream" uid="uid://3b06ilm2u7h8" path="res://audio/container_shakes/cat mouse.wav" id="8_gf0g1"]
+[ext_resource type="AudioStream" uid="uid://cslhks36gsplg" path="res://audio/container_shakes/citrus in water in glass jar.wav" id="9_yxrhc"]
+[ext_resource type="AudioStream" uid="uid://crxfqv8l248gr" path="res://audio/container_shakes/coins in glass jar.wav" id="10_r5nyq"]
+[ext_resource type="AudioStream" uid="uid://benobqn4q15yc" path="res://audio/container_shakes/deodorant in glass.wav" id="11_xanqb"]
+[ext_resource type="AudioStream" uid="uid://dfu1mtx0okeud" path="res://audio/container_shakes/Doritos in bag.wav" id="12_dxwbx"]
+[ext_resource type="AudioStream" uid="uid://br815um0chkc2" path="res://audio/container_shakes/Happy.wav" id="13_aemsh"]
+[ext_resource type="AudioStream" uid="uid://b7gnc885mavud" path="res://audio/container_shakes/Sad.wav" id="14_ubmrd"]
+[ext_resource type="AudioStream" uid="uid://clm6eba87rl75" path="res://audio/container_shakes/Singing Tree.wav" id="15_t7ogt"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -27,6 +36,51 @@ position = Vector2(1065, 391)
 container_index = 2
 sound = ExtResource("6_bc85i")
 
+[node name="Container3" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(1255, 147)
+container_index = 3
+sound = ExtResource("7_k6wrs")
+
+[node name="Container4" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(675, 161)
+container_index = 4
+sound = ExtResource("8_gf0g1")
+
+[node name="Container5" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(244.098, 292.111)
+container_index = 5
+sound = ExtResource("9_yxrhc")
+
+[node name="Container6" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(405.83, 529.952)
+container_index = 6
+sound = ExtResource("10_r5nyq")
+
+[node name="Container7" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(253.612, 777.307)
+container_index = 7
+sound = ExtResource("11_xanqb")
+
+[node name="Container8" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(1383.36, 648.873)
+container_index = 8
+sound = ExtResource("12_dxwbx")
+
+[node name="Container9" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(1668.77, 836.768)
+container_index = 9
+sound = ExtResource("13_aemsh")
+
+[node name="Container10" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(1773.42, 577.521)
+container_index = 10
+sound = ExtResource("14_ubmrd")
+
+[node name="Container11" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(560.427, 774.929)
+container_index = 11
+sound = ExtResource("15_t7ogt")
+
 [node name="Light" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
@@ -36,3 +90,12 @@ texture = ExtResource("7_wlnhj")
 [connection signal="hide" from="SelectedContainer" to="." method="_on_selected_container_hide"]
 [connection signal="container_selected" from="ContainersOnTable/Container1" to="." method="_on_container_on_table_container_selected"]
 [connection signal="container_selected" from="ContainersOnTable/Container2" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container3" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container4" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container5" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container6" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container7" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container8" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container9" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container10" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container11" to="." method="_on_container_on_table_container_selected"]
