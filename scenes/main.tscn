@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=8 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c23yvb2ggl0qf" path="res://scenes/cauldron.tscn" id="4_ivklr"]
 [ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/single coin in glass jar electric.wav" id="5_v14fl"]
 [ext_resource type="AudioStream" uid="uid://jkj3e2hxlumf" path="res://audio/container_shakes/fava can.wav" id="6_bc85i"]
+[ext_resource type="Texture2D" uid="uid://b2y1r4yjmy2le" path="res://art/Light.png" id="7_wlnhj"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -26,6 +27,12 @@ position = Vector2(1065, 391)
 container_index = 2
 sound = ExtResource("6_bc85i")
 
+[node name="Light" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("7_wlnhj")
+
+[connection signal="ingredient_added" from="Cauldron" to="." method="_on_cauldron_ingredient_added"]
 [connection signal="hide" from="SelectedContainer" to="." method="_on_selected_container_hide"]
 [connection signal="container_selected" from="ContainersOnTable/Container1" to="." method="_on_container_on_table_container_selected"]
 [connection signal="container_selected" from="ContainersOnTable/Container2" to="." method="_on_container_on_table_container_selected"]
