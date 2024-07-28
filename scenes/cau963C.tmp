@@ -12,13 +12,13 @@ height = 802.0
 [node name="Cauldron" type="Node2D"]
 script = ExtResource("1_b0mv6")
 
-[node name="CauldronSprite" type="Sprite2D" parent="."]
-position = Vector2(981, 1120)
-texture = ExtResource("1_0v06e")
-
 [node name="CauldronFailSprite" type="Sprite2D" parent="."]
 position = Vector2(978, 1113)
 texture = ExtResource("3_yju4e")
+
+[node name="CauldronSprite" type="Sprite2D" parent="."]
+position = Vector2(981, 1120)
+texture = ExtResource("1_0v06e")
 
 [node name="DownArrow" type="Sprite2D" parent="."]
 position = Vector2(968, 819)

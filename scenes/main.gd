@@ -54,6 +54,7 @@ func _on_selected_container_hide():
 
 func _on_cauldron_ingredient_added():
 	_cauldron_contents.append(_selected_ingredient_index)
+	_on_selected_container_hide()
 	
 	if _selected_ingredient_index == final_ingredient:
 		_cauldron_contents.sort()
@@ -61,3 +62,5 @@ func _on_cauldron_ingredient_added():
 		if _cauldron_contents == potion_ingredients:
 			$Light.show()
 			_show_light = true
+		else:
+			$Cauldron.show_failed_cauldron()
