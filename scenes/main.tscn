@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=7 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
 [ext_resource type="PackedScene" uid="uid://qv8tgnmqw4af" path="res://scenes/container_on_table.tscn" id="4_1ldp7"]
 [ext_resource type="PackedScene" uid="uid://c23yvb2ggl0qf" path="res://scenes/cauldron.tscn" id="4_ivklr"]
+[ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/single coin in glass jar electric.wav" id="5_v14fl"]
+[ext_resource type="AudioStream" uid="uid://jkj3e2hxlumf" path="res://audio/container_shakes/fava can.wav" id="6_bc85i"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -17,10 +19,12 @@ visible = false
 
 [node name="Container1" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(697, 508)
+sound = ExtResource("5_v14fl")
 
 [node name="Container2" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(1065, 391)
 container_index = 2
+sound = ExtResource("6_bc85i")
 
 [connection signal="hide" from="SelectedContainer" to="." method="_on_selected_container_hide"]
 [connection signal="container_selected" from="ContainersOnTable/Container1" to="." method="_on_container_on_table_container_selected"]

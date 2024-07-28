@@ -2,11 +2,6 @@ extends Node2D
 
 signal hide
 
-const CONTAINER_SOUNDS = {
-	1: preload("res://audio/container_shakes/single coin in glass jar electric.wav"),
-	2: preload("res://audio/container_shakes/fava can.wav")
-}
-
 var _shake_container = false
 
 # Called when the node enters the scene tree for the first time.
@@ -43,5 +38,5 @@ func _on_back_arrow_input_event(viewport, event, shape_idx):
 		$ContainerImage.position = $Path2D/PathFollow2D.position
 
 
-func set_container(index: int):
-	$AudioStreamPlayer2D.stream = CONTAINER_SOUNDS[index]
+func set_container(sound: Resource):
+	$AudioStreamPlayer2D.stream = sound
