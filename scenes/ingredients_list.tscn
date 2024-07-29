@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://c55xavh00468w"]
+
+[ext_resource type="FontFile" uid="uid://dch5t21h8gaby" path="res://fonts/Ayamikan.ttf" id="1_jmnw8"]
+
+[node name="IngredientsList" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -539.0
+offset_top = 64.0
+offset_bottom = 567.0
+grow_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.458824, 0.792157, 0.819608, 1)
+theme_override_fonts/normal_font = ExtResource("1_jmnw8")
+theme_override_font_sizes/normal_font_size = 41
+bbcode_enabled = true
+text = "INGREDIENTS LIST
+[ul bullet=-]
+one
+two
+three
+[/ul]
+
+FINAL INGREDIENT:
+	Electro Shard"

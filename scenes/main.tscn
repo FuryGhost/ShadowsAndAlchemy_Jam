@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=19 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://clm6eba87rl75" path="res://audio/container_shakes/Singing Tree.wav" id="15_t7ogt"]
 [ext_resource type="PackedScene" uid="uid://cyrcxtua6vvvm" path="res://scenes/win_screen.tscn" id="17_5vv12"]
 [ext_resource type="PackedScene" uid="uid://c0tvkw3m0w3ey" path="res://scenes/failed_screen.tscn" id="17_7ytvs"]
+[ext_resource type="PackedScene" uid="uid://c55xavh00468w" path="res://scenes/ingredients_list.tscn" id="18_rvy5r"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -81,6 +82,8 @@ sound = ExtResource("14_ubmrd")
 position = Vector2(560.427, 774.929)
 container_index = 11
 sound = ExtResource("15_t7ogt")
+
+[node name="IngredientsList" parent="." instance=ExtResource("18_rvy5r")]
 
 [node name="FailedScreen" parent="." instance=ExtResource("17_7ytvs")]
 visible = false

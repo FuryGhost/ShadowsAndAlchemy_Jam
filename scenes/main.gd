@@ -62,8 +62,10 @@ func _on_cauldron_ingredient_added():
 func _win_game():
 	$WinScreen.show()
 	$ContainersOnTable.hide()
+	$IngredientsList.hide()
 
 func _fail_game():
 	$ContainersOnTable.hide()
+	$IngredientsList.hide()
 	$Cauldron.show_failed_cauldron()
 	$FailedScreen.show()
