@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyrcxtua6vvvm"]
+
+[ext_resource type="Script" path="res://scenes/win_screen.gd" id="1_pe3w3"]
+[ext_resource type="Texture2D" uid="uid://b2y1r4yjmy2le" path="res://art/Light.png" id="1_trtux"]
+[ext_resource type="FontFile" uid="uid://dch5t21h8gaby" path="res://fonts/Ayamikan.ttf" id="2_6dbj5"]
+
+[node name="WinScreen" type="CanvasLayer"]
+script = ExtResource("1_pe3w3")
+
+[node name="Light" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_trtux")
+
+[node name="Contents" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Contents"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -738.5
+offset_right = 738.5
+offset_bottom = 493.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.113725, 0.176471, 0.345098, 1)
+theme_override_fonts/font = ExtResource("2_6dbj5")
+theme_override_font_sizes/font_size = 465
+text = "You did it!"
+
+[node name="Subtitle" type="Label" parent="Contents"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -482.0
+offset_top = 432.0
+offset_right = 482.0
+offset_bottom = 502.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.113725, 0.176471, 0.345098, 1)
+theme_override_fonts/font = ExtResource("2_6dbj5")
+theme_override_font_sizes/font_size = 66
+text = "Maybe even a little too well..."
+horizontal_alignment = 1
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

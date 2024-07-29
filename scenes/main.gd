@@ -7,7 +7,6 @@ const CURSOR_CENTER: Vector2 = Vector2(16, 16)
 
 var _cauldron_contents: Array = []
 var _selected_ingredient_index: int
-var _show_light = false
 
 @onready var open_hand_cursor: Resource = preload("res://art/cursor/OpenHandCursor_small.png")
 @onready var closed_hand_cursor: Resource = preload("res://art/cursor/ClosedHandCursor_small.png")
@@ -18,8 +17,6 @@ func _ready():
 	$SelectedContainer.hide()
 	$Cauldron/Area2D/CollisionShape2D.disabled = true
 	potion_ingredients.sort()
-	$Light.hide()
-	$Light.modulate.a = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,9 +25,6 @@ func _process(delta):
 		_set_cursor(closed_hand_cursor)
 	elif Input.is_action_just_released("click"):
 		_set_cursor(open_hand_cursor)
-	
-	if _show_light && $Light.modulate.a < 1:
-		$Light.modulate.a += 0.5 * delta
 
 
 func _set_cursor(cursor: Resource):
@@ -60,7 +54,16 @@ func _on_cauldron_ingredient_added():
 		_cauldron_contents.sort()
 		
 		if _cauldron_contents == potion_ingredients:
-			$Light.show()
-			_show_light = true
+			_win_game()
 		else:
-			$Cauldron.show_failed_cauldron()
+			_fail_game()
+
+
+func _win_game():
+	$WinScreen.show()
+	$ContainersOnTable.hide()
+
+func _fail_game():
+	$ContainersOnTable.hide()
+	$Cauldron.show_failed_cauldron()
+	$FailedScreen.show()

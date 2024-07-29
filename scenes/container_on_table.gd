@@ -8,7 +8,6 @@ signal container_selected(index: int, sound: Resource)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#$UpArrow.hide()
 	$UpArrow.modulate.a = 0.3
 
 

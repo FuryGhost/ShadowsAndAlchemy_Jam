@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=18 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
@@ -7,7 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/single coin in glass jar electric.wav" id="5_v14fl"]
 [ext_resource type="AudioStream" uid="uid://jkj3e2hxlumf" path="res://audio/container_shakes/fava can.wav" id="6_bc85i"]
 [ext_resource type="AudioStream" uid="uid://bk74kf2g8567b" path="res://audio/container_shakes/cat mouse in glass jar.wav" id="7_k6wrs"]
-[ext_resource type="Texture2D" uid="uid://b2y1r4yjmy2le" path="res://art/Light.png" id="7_wlnhj"]
 [ext_resource type="AudioStream" uid="uid://3b06ilm2u7h8" path="res://audio/container_shakes/cat mouse.wav" id="8_gf0g1"]
 [ext_resource type="AudioStream" uid="uid://cslhks36gsplg" path="res://audio/container_shakes/citrus in water in glass jar.wav" id="9_yxrhc"]
 [ext_resource type="AudioStream" uid="uid://crxfqv8l248gr" path="res://audio/container_shakes/coins in glass jar.wav" id="10_r5nyq"]
@@ -16,6 +15,8 @@
 [ext_resource type="AudioStream" uid="uid://br815um0chkc2" path="res://audio/container_shakes/Happy.wav" id="13_aemsh"]
 [ext_resource type="AudioStream" uid="uid://b7gnc885mavud" path="res://audio/container_shakes/Sad.wav" id="14_ubmrd"]
 [ext_resource type="AudioStream" uid="uid://clm6eba87rl75" path="res://audio/container_shakes/Singing Tree.wav" id="15_t7ogt"]
+[ext_resource type="PackedScene" uid="uid://cyrcxtua6vvvm" path="res://scenes/win_screen.tscn" id="17_5vv12"]
+[ext_resource type="PackedScene" uid="uid://c0tvkw3m0w3ey" path="res://scenes/failed_screen.tscn" id="17_7ytvs"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -81,10 +82,11 @@ position = Vector2(560.427, 774.929)
 container_index = 11
 sound = ExtResource("15_t7ogt")
 
-[node name="Light" type="Sprite2D" parent="."]
+[node name="FailedScreen" parent="." instance=ExtResource("17_7ytvs")]
 visible = false
-position = Vector2(960, 540)
-texture = ExtResource("7_wlnhj")
+
+[node name="WinScreen" parent="." instance=ExtResource("17_5vv12")]
+visible = false
 
 [connection signal="ingredient_added" from="Cauldron" to="." method="_on_cauldron_ingredient_added"]
 [connection signal="hide" from="SelectedContainer" to="." method="_on_selected_container_hide"]
