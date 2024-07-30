@@ -24,3 +24,4 @@ func _on_area_2d_mouse_exited():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
 		start_game.emit()
+		$AudioStreamPlayer2D.play()
