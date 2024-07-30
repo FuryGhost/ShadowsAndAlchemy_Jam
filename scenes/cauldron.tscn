@@ -17,6 +17,7 @@ position = Vector2(981, 1120)
 texture = ExtResource("1_0v06e")
 
 [node name="CauldronFailSprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(978, 1113)
 texture = ExtResource("3_yju4e")
 

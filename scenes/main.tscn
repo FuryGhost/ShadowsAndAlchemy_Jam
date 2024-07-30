@@ -32,16 +32,16 @@ visible = false
 [node name="ContainersOnTable" type="Node2D" parent="."]
 
 [node name="Container1" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(697, 508)
+position = Vector2(667, 470)
 sound = ExtResource("5_7dk75")
 
 [node name="Container2" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(1065, 391)
+position = Vector2(982, 371)
 container_index = 2
 sound = ExtResource("6_bhc1v")
 
 [node name="Container3" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(1255, 147)
+position = Vector2(1184, 157)
 container_index = 3
 sound = ExtResource("7_bog28")
 
@@ -51,12 +51,12 @@ container_index = 4
 sound = ExtResource("8_qh7yr")
 
 [node name="Container5" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(244.098, 292.111)
+position = Vector2(262, 214)
 container_index = 5
 sound = ExtResource("9_yu13j")
 
 [node name="Container6" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(405.83, 529.952)
+position = Vector2(310, 507)
 container_index = 6
 sound = ExtResource("10_27guw")
 
@@ -76,7 +76,7 @@ container_index = 9
 sound = ExtResource("13_3jrya")
 
 [node name="Container10" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(1773.42, 577.521)
+position = Vector2(970, 661)
 container_index = 10
 sound = ExtResource("14_jft1m")
 
@@ -86,6 +86,7 @@ container_index = 11
 sound = ExtResource("15_4mruf")
 
 [node name="Container12" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(1244, 446)
 container_index = 12
 sound = ExtResource("5_v14fl")
 
