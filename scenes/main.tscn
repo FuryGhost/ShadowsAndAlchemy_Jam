@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=25 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://d1fymydnkhpkn" path="res://scenes/title_screen.tscn" id="20_w8qn1"]
 [ext_resource type="Texture2D" uid="uid://lue1agcq4y77" path="res://art/Backgrounds/Background.png" id="21_icg38"]
 [ext_resource type="PackedScene" uid="uid://baj7rpiphdk6p" path="res://scenes/start_sequence.tscn" id="23_kbnu6"]
+[ext_resource type="AudioStream" uid="uid://4tsdod26bfo" path="res://audio/Light by Sound.wav" id="24_7gld1"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -117,6 +118,9 @@ visible = false
 
 [node name="StartSequence" parent="." instance=ExtResource("23_kbnu6")]
 visible = false
+
+[node name="ThemeAudioPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_7gld1")
 
 [connection signal="ingredient_added" from="Cauldron" to="." method="_on_cauldron_ingredient_added"]
 [connection signal="hide" from="SelectedContainer" to="." method="_on_selected_container_hide"]

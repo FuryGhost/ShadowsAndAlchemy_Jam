@@ -19,6 +19,7 @@ func _ready():
 	potion_ingredients.sort()
 	$ContainersOnTable.hide()
 	$TitleScreen.show()
+	$ThemeAudioPlayer.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,12 +41,14 @@ func _on_container_on_table_container_selected(index, sound, position):
 	$ContainersOnTable.hide()
 	$SelectedContainer.show()
 	$Cauldron/Area2D/CollisionShape2D.disabled = false
+	$ThemeAudioPlayer.volume_db = -10
 
 
 func _on_selected_container_hide():
 	$SelectedContainer.hide()
 	$ContainersOnTable.show()
 	$Cauldron/Area2D/CollisionShape2D.disabled = true
+	$ThemeAudioPlayer.volume_db = 0
 
 
 func _on_cauldron_ingredient_added():
