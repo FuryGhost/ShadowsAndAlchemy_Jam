@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://beeqb3debqxk3"]
+[gd_scene load_steps=13 format=3 uid="uid://beeqb3debqxk3"]
 
 [ext_resource type="Texture2D" uid="uid://ccxmlrfwmswyf" path="res://art/containers/Container_1.png" id="1_0wbu2"]
 [ext_resource type="Script" path="res://scenes/selected_container.gd" id="1_nmwbw"]
 [ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/12 single coin in glass jar electric.wav" id="3_1ma7j"]
 [ext_resource type="Texture2D" uid="uid://dcif7avy4wxg4" path="res://art/indicators/BackArrow.png" id="4_xfrea"]
-[ext_resource type="AudioStream" uid="uid://jkjwj6we1bj3" path="res://audio/ReturnContainer.wav" id="6_33kay"]
+[ext_resource type="AudioStream" uid="uid://bvkmurobw0ylj" path="res://audio/return_container/d1.wav" id="5_j0l3e"]
+[ext_resource type="AudioStream" uid="uid://dj0bb71aymwhw" path="res://audio/return_container/d2.wav" id="6_mihye"]
+[ext_resource type="AudioStream" uid="uid://dby7jhakvqhcn" path="res://audio/return_container/d3.wav" id="7_co8ns"]
+[ext_resource type="AudioStream" uid="uid://bfe4vmvmwpmd3" path="res://audio/return_container/d4.wav" id="8_x20xj"]
 
 [sub_resource type="Curve2D" id="Curve2D_t2mpi"]
 _data = {
@@ -18,6 +21,18 @@ height = 657.902
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfees"]
 radius = 86.2967
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ejftv"]
+random_pitch = 1.3
+streams_count = 4
+stream_0/stream = ExtResource("5_j0l3e")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("6_mihye")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("7_co8ns")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("8_x20xj")
+stream_3/weight = 1.0
 
 [node name="SelectedContainer" type="Node2D"]
 script = ExtResource("1_nmwbw")
@@ -56,7 +71,7 @@ position = Vector2(500, 524)
 shape = SubResource("CircleShape2D_bfees")
 
 [node name="ReturnContainerAudioPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_33kay")
+stream = SubResource("AudioStreamRandomizer_ejftv")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="input_event" from="BackArrow" to="." method="_on_back_arrow_input_event"]
