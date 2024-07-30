@@ -56,12 +56,12 @@ container_index = 4
 sound = ExtResource("8_qh7yr")
 
 [node name="Container5" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(262, 214)
+position = Vector2(1492, 286)
 container_index = 5
 sound = ExtResource("9_yu13j")
 
 [node name="Container6" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(310, 507)
+position = Vector2(1693, 541)
 container_index = 6
 sound = ExtResource("10_27guw")
 

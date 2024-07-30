@@ -6,13 +6,11 @@
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -539.0
-offset_top = 64.0
-offset_bottom = 567.0
-grow_horizontal = 0
+anchors_preset = 0
+offset_left = 64.0
+offset_top = 56.0
+offset_right = 603.0
+offset_bottom = 559.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 1
@@ -27,10 +25,11 @@ theme_override_font_sizes/normal_font_size = 41
 bbcode_enabled = true
 text = "INGREDIENTS LIST
 [ul bullet=-]
-one
-two
-three
+Bark of the flute tree
+Brumples bubbles
+Gold nugget
+Happy fairy's dust
 [/ul]
 
 FINAL INGREDIENT:
-	Electro Shard"
+	Electrill Shard"
