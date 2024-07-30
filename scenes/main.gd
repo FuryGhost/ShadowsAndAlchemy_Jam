@@ -33,10 +33,10 @@ func _set_cursor(cursor: Resource):
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, CURSOR_CENTER)
 
 
-func _on_container_on_table_container_selected(index, sound):
+func _on_container_on_table_container_selected(index, sound, position):
 	_selected_ingredient_index = index
 	
-	$SelectedContainer.set_container(sound)
+	$SelectedContainer.set_container(sound, position)
 	$ContainersOnTable.hide()
 	$SelectedContainer.show()
 	$Cauldron/Area2D/CollisionShape2D.disabled = false

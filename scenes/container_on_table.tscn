@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://qv8tgnmqw4af"]
+[gd_scene load_steps=5 format=3 uid="uid://qv8tgnmqw4af"]
 
 [ext_resource type="Script" path="res://scenes/container_on_table.gd" id="1_28suh"]
 [ext_resource type="Texture2D" uid="uid://c1jrklblnm10f" path="res://art/indicators/UpArrow.png" id="2_tb1u2"]
+[ext_resource type="AudioStream" uid="uid://bp6072kawerwh" path="res://audio/GetContainer.wav" id="3_pcbdw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uok0p"]
 radius = 95.3363
@@ -17,6 +18,9 @@ shape = SubResource("CircleShape2D_uok0p")
 [node name="UpArrow" type="Sprite2D" parent="."]
 position = Vector2(13, -44)
 texture = ExtResource("2_tb1u2")
+
+[node name="GetContainerAudioPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_pcbdw")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

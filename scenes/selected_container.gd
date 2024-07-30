@@ -26,17 +26,19 @@ func _process(delta):
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed && !_shake_container:
 		_shake_container = true;
-		$AudioStreamPlayer2D.play()
+		$ShakeAudioPlayer.play()
 
 
 func _on_back_arrow_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
-		$AudioStreamPlayer2D.stop()
+		$ShakeAudioPlayer.stop()
 		hide.emit()
 		_shake_container = false
 		$Path2D/PathFollow2D.progress = 0
 		$ContainerImage.position = $Path2D/PathFollow2D.position
+		$ReturnContainerAudioPlayer.play()
 
 
-func set_container(sound: Resource):
-	$AudioStreamPlayer2D.stream = sound
+func set_container(sound: Resource, position: Vector2):
+	$ShakeAudioPlayer.stream = sound
+	$ReturnContainerAudioPlayer.position = position

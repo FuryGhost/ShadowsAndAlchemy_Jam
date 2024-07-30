@@ -30,6 +30,7 @@ func _on_area_2d_mouse_exited():
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && event.pressed:
 		ingredient_added.emit()
+		$AudioStreamPlayer2D.play()
 
 func show_failed_cauldron():
 	_show_failed = true
