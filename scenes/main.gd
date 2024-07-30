@@ -49,7 +49,9 @@ func _on_selected_container_hide():
 
 
 func _on_cauldron_ingredient_added():
-	_cauldron_contents.append(_selected_ingredient_index)
+	if (!_cauldron_contents.has(_selected_ingredient_index)):
+		_cauldron_contents.append(_selected_ingredient_index)
+	
 	_on_selected_container_hide()
 	
 	if _selected_ingredient_index == final_ingredient:
