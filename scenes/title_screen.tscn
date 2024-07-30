@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1fymydnkhpkn"]
 
 [ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_mqhy8"]
-[ext_resource type="Texture2D" uid="uid://ghyilfq0jqdk" path="res://art/StartScreen.png" id="1_ua5d8"]
 [ext_resource type="Texture2D" uid="uid://bg1h0eibt4tqm" path="res://art/StartButton.png" id="2_64dwq"]
+[ext_resource type="Texture2D" uid="uid://ghyilfq0jqdk" path="res://art/Backgrounds/StartScreen.png" id="2_y25ge"]
 [ext_resource type="AudioStream" uid="uid://cfxaq48w38n2g" path="res://audio/start.wav" id="4_qh410"]
 
 [node name="TitleScreen" type="CanvasLayer"]
@@ -10,7 +10,7 @@ script = ExtResource("1_mqhy8")
 
 [node name="StartScreen" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("1_ua5d8")
+texture = ExtResource("2_y25ge")
 
 [node name="Area2D" type="Area2D" parent="."]
 metadata/_edit_group_ = true

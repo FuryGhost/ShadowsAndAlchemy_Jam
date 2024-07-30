@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2y1r4yjmy2le"
-path="res://.godot/imported/Light.png-4b5bbbf5f77d9a4fd17bc00c9b6a802f.ctex"
+uid="uid://ghyilfq0jqdk"
+path="res://.godot/imported/StartScreen.png-6e7e29b226649c92df9e9ac95360ba58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Light.png"
-dest_files=["res://.godot/imported/Light.png-4b5bbbf5f77d9a4fd17bc00c9b6a802f.ctex"]
+source_file="res://art/Backgrounds/StartScreen.png"
+dest_files=["res://.godot/imported/StartScreen.png-6e7e29b226649c92df9e9ac95360ba58.ctex"]
 
 [params]
 

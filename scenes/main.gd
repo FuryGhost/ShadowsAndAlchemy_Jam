@@ -76,9 +76,19 @@ func _fail_game():
 
 
 func _on_title_screen_start_game():
+	$TitleScreen.hide()
+	$StartSequence.show()
+
+
+func _on_start_sequence_start_play():
+	_start_playing_game()
+
+
+func _start_playing_game():
 	$Cauldron.show()
 	$SelectedContainer.hide()
 	$ContainersOnTable.show()
 	$IngredientsList.show()
 	_cauldron_contents = []
 	$TitleScreen.hide()
+	$StartSequence.hide()

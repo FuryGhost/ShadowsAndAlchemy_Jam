@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyrcxtua6vvvm"]
 
 [ext_resource type="Script" path="res://scenes/win_screen.gd" id="1_pe3w3"]
-[ext_resource type="Texture2D" uid="uid://b2y1r4yjmy2le" path="res://art/Light.png" id="1_trtux"]
+[ext_resource type="Texture2D" uid="uid://b2y1r4yjmy2le" path="res://art/Backgrounds/Light.png" id="1_trtux"]
 [ext_resource type="FontFile" uid="uid://dch5t21h8gaby" path="res://fonts/Ayamikan.ttf" id="2_6dbj5"]
 
 [node name="WinScreen" type="CanvasLayer"]

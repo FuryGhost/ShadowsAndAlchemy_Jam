@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=3 uid="uid://baj7rpiphdk6p"]
+
+[ext_resource type="Texture2D" uid="uid://bot6wtc5ik70i" path="res://art/Backgrounds/StartScreenBackground.png" id="1_6b267"]
+[ext_resource type="Script" path="res://scenes/start_sequence.gd" id="1_r63jf"]
+[ext_resource type="FontFile" uid="uid://dch5t21h8gaby" path="res://fonts/Ayamikan.ttf" id="2_ifhja"]
+[ext_resource type="Texture2D" uid="uid://dsw3oemekpc53" path="res://art/Backgrounds/ShatteredPotion.png" id="2_p2xxt"]
+[ext_resource type="Texture2D" uid="uid://lue1agcq4y77" path="res://art/Backgrounds/Background.png" id="3_86hfv"]
+[ext_resource type="Texture2D" uid="uid://wuxp03gmf8lx" path="res://art/NextButton.png" id="5_3eava"]
+[ext_resource type="AudioStream" uid="uid://cfxaq48w38n2g" path="res://audio/start.wav" id="7_v0g14"]
+[ext_resource type="AudioStream" uid="uid://2n6s17y1xl8l" path="res://audio/glass jar breaking.wav" id="8_cy82s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ybc1b"]
+radius = 66.436
+
+[node name="StartSequence" type="CanvasLayer"]
+script = ExtResource("1_r63jf")
+
+[node name="StartScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StartScreenBackgroundSprite" type="Sprite2D" parent="StartScreen"]
+position = Vector2(960, 540)
+texture = ExtResource("1_6b267")
+
+[node name="Label" type="Label" parent="StartScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -797.0
+offset_top = 240.0
+offset_right = 797.0
+offset_bottom = 347.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.027451, 0.109804, 0.219608, 1)
+theme_override_fonts/font = ExtResource("2_ifhja")
+theme_override_font_sizes/font_size = 100
+text = "You are an alchemist, working in your lab. But then..."
+
+[node name="ShatteredPotion" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ShatteredPotionSprite" type="Sprite2D" parent="ShatteredPotion"]
+position = Vector2(960, 540)
+texture = ExtResource("2_p2xxt")
+
+[node name="Label" type="Label" parent="ShatteredPotion"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -696.5
+offset_top = 240.0
+offset_right = 696.5
+offset_bottom = 347.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.2, 0.443137, 0.462745, 1)
+theme_override_fonts/font = ExtResource("2_ifhja")
+theme_override_font_sizes/font_size = 100
+text = "You accidentally knock over your light potion!"
+
+[node name="DarkBackground" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BackgroundSprite" type="Sprite2D" parent="DarkBackground"]
+position = Vector2(960, 540)
+texture = ExtResource("3_86hfv")
+
+[node name="Label" type="Label" parent="DarkBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -926.5
+offset_top = 184.0
+offset_right = 926.5
+offset_bottom = 401.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.2, 0.443137, 0.462745, 1)
+theme_override_fonts/font = ExtResource("2_ifhja")
+theme_override_font_sizes/font_size = 100
+text = "You know the ingredients by heart, but,
+You can't see them in the dark..."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="NextButton" type="Area2D" parent="."]
+
+[node name="NextButtonSprite" type="Sprite2D" parent="NextButton"]
+position = Vector2(971, 474)
+texture = ExtResource("5_3eava")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextButton"]
+position = Vector2(955, 472)
+shape = SubResource("CircleShape2D_ybc1b")
+
+[node name="ButtonClickAudioPlayer" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1243.9, 753.294)
+stream = ExtResource("7_v0g14")
+
+[node name="ShatterAudioPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_cy82s")
+
+[connection signal="input_event" from="NextButton" to="." method="_on_next_button_input_event"]
+[connection signal="mouse_entered" from="NextButton" to="." method="_on_next_button_mouse_entered"]
+[connection signal="mouse_exited" from="NextButton" to="." method="_on_next_button_mouse_exited"]
