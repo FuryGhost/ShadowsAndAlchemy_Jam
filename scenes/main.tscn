@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=22 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
@@ -20,9 +20,14 @@
 [ext_resource type="PackedScene" uid="uid://c0tvkw3m0w3ey" path="res://scenes/failed_screen.tscn" id="17_7ytvs"]
 [ext_resource type="PackedScene" uid="uid://c55xavh00468w" path="res://scenes/ingredients_list.tscn" id="18_rvy5r"]
 [ext_resource type="PackedScene" uid="uid://d1fymydnkhpkn" path="res://scenes/title_screen.tscn" id="20_w8qn1"]
+[ext_resource type="Texture2D" uid="uid://lue1agcq4y77" path="res://art/Background.png" id="21_icg38"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("21_icg38")
 
 [node name="Cauldron" parent="." instance=ExtResource("4_ivklr")]
 
