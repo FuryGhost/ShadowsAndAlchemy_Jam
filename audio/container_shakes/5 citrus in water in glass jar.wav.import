@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5aknsglfj5kg"
+path="res://.godot/imported/5 citrus in water in glass jar.wav-4e2f9cd2af2f6a29dd92c2ef35ce062b.sample"
+
+[deps]
+
+source_file="res://audio/container_shakes/5 citrus in water in glass jar.wav"
+dest_files=["res://.godot/imported/5 citrus in water in glass jar.wav-4e2f9cd2af2f6a29dd92c2ef35ce062b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

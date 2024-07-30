@@ -1,23 +1,25 @@
-[gd_scene load_steps=19 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=21 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
 [ext_resource type="PackedScene" uid="uid://qv8tgnmqw4af" path="res://scenes/container_on_table.tscn" id="4_1ldp7"]
 [ext_resource type="PackedScene" uid="uid://c23yvb2ggl0qf" path="res://scenes/cauldron.tscn" id="4_ivklr"]
-[ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/single coin in glass jar electric.wav" id="5_v14fl"]
-[ext_resource type="AudioStream" uid="uid://jkj3e2hxlumf" path="res://audio/container_shakes/fava can.wav" id="6_bc85i"]
-[ext_resource type="AudioStream" uid="uid://bk74kf2g8567b" path="res://audio/container_shakes/cat mouse in glass jar.wav" id="7_k6wrs"]
-[ext_resource type="AudioStream" uid="uid://3b06ilm2u7h8" path="res://audio/container_shakes/cat mouse.wav" id="8_gf0g1"]
-[ext_resource type="AudioStream" uid="uid://cslhks36gsplg" path="res://audio/container_shakes/citrus in water in glass jar.wav" id="9_yxrhc"]
-[ext_resource type="AudioStream" uid="uid://crxfqv8l248gr" path="res://audio/container_shakes/coins in glass jar.wav" id="10_r5nyq"]
-[ext_resource type="AudioStream" uid="uid://benobqn4q15yc" path="res://audio/container_shakes/deodorant in glass.wav" id="11_xanqb"]
-[ext_resource type="AudioStream" uid="uid://dfu1mtx0okeud" path="res://audio/container_shakes/Doritos in bag.wav" id="12_dxwbx"]
-[ext_resource type="AudioStream" uid="uid://br815um0chkc2" path="res://audio/container_shakes/Happy.wav" id="13_aemsh"]
-[ext_resource type="AudioStream" uid="uid://b7gnc885mavud" path="res://audio/container_shakes/Sad.wav" id="14_ubmrd"]
-[ext_resource type="AudioStream" uid="uid://clm6eba87rl75" path="res://audio/container_shakes/Singing Tree.wav" id="15_t7ogt"]
+[ext_resource type="AudioStream" uid="uid://dgtxu6nkwu0fg" path="res://audio/container_shakes/1 Singing Tree.wav" id="5_7dk75"]
+[ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/12 single coin in glass jar electric.wav" id="5_v14fl"]
+[ext_resource type="AudioStream" uid="uid://fgwq1hfqc6b" path="res://audio/container_shakes/2 Sad.wav" id="6_bhc1v"]
+[ext_resource type="AudioStream" uid="uid://me8y015mvnn4" path="res://audio/container_shakes/3 cat mouse in glass jar.wav" id="7_bog28"]
+[ext_resource type="AudioStream" uid="uid://c5xrj2r6n533a" path="res://audio/container_shakes/4 cat mouse.wav" id="8_qh7yr"]
+[ext_resource type="AudioStream" uid="uid://5aknsglfj5kg" path="res://audio/container_shakes/5 citrus in water in glass jar.wav" id="9_yu13j"]
+[ext_resource type="AudioStream" uid="uid://8nykdvacwhmy" path="res://audio/container_shakes/6 coins in glass jar.wav" id="10_27guw"]
+[ext_resource type="AudioStream" uid="uid://cw3jg2uay5bq6" path="res://audio/container_shakes/7 deodorant in glass.wav" id="11_w0koi"]
+[ext_resource type="AudioStream" uid="uid://uv4hj8l83vq7" path="res://audio/container_shakes/8 Doritos in bag.wav" id="12_xpodr"]
+[ext_resource type="AudioStream" uid="uid://d2leqh1dm8yyc" path="res://audio/container_shakes/9 fava can.wav" id="13_3jrya"]
+[ext_resource type="AudioStream" uid="uid://cu5gjrdjxruv5" path="res://audio/container_shakes/10 Happy.wav" id="14_jft1m"]
+[ext_resource type="AudioStream" uid="uid://u6gyyt7mpy40" path="res://audio/container_shakes/11 little citrus in glass jar.wav" id="15_4mruf"]
 [ext_resource type="PackedScene" uid="uid://cyrcxtua6vvvm" path="res://scenes/win_screen.tscn" id="17_5vv12"]
 [ext_resource type="PackedScene" uid="uid://c0tvkw3m0w3ey" path="res://scenes/failed_screen.tscn" id="17_7ytvs"]
 [ext_resource type="PackedScene" uid="uid://c55xavh00468w" path="res://scenes/ingredients_list.tscn" id="18_rvy5r"]
+[ext_resource type="PackedScene" uid="uid://d1fymydnkhpkn" path="res://scenes/title_screen.tscn" id="20_w8qn1"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lrgdy")
@@ -31,57 +33,61 @@ visible = false
 
 [node name="Container1" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(697, 508)
-sound = ExtResource("5_v14fl")
+sound = ExtResource("5_7dk75")
 
 [node name="Container2" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(1065, 391)
 container_index = 2
-sound = ExtResource("6_bc85i")
+sound = ExtResource("6_bhc1v")
 
 [node name="Container3" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(1255, 147)
 container_index = 3
-sound = ExtResource("7_k6wrs")
+sound = ExtResource("7_bog28")
 
 [node name="Container4" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(675, 161)
 container_index = 4
-sound = ExtResource("8_gf0g1")
+sound = ExtResource("8_qh7yr")
 
 [node name="Container5" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(244.098, 292.111)
 container_index = 5
-sound = ExtResource("9_yxrhc")
+sound = ExtResource("9_yu13j")
 
 [node name="Container6" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(405.83, 529.952)
 container_index = 6
-sound = ExtResource("10_r5nyq")
+sound = ExtResource("10_27guw")
 
 [node name="Container7" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(253.612, 777.307)
 container_index = 7
-sound = ExtResource("11_xanqb")
+sound = ExtResource("11_w0koi")
 
 [node name="Container8" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(1383.36, 648.873)
 container_index = 8
-sound = ExtResource("12_dxwbx")
+sound = ExtResource("12_xpodr")
 
 [node name="Container9" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(1668.77, 836.768)
 container_index = 9
-sound = ExtResource("13_aemsh")
+sound = ExtResource("13_3jrya")
 
 [node name="Container10" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(1773.42, 577.521)
 container_index = 10
-sound = ExtResource("14_ubmrd")
+sound = ExtResource("14_jft1m")
 
 [node name="Container11" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
 position = Vector2(560.427, 774.929)
 container_index = 11
-sound = ExtResource("15_t7ogt")
+sound = ExtResource("15_4mruf")
+
+[node name="Container12" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+container_index = 12
+sound = ExtResource("5_v14fl")
 
 [node name="IngredientsList" parent="." instance=ExtResource("18_rvy5r")]
 
@@ -89,6 +95,9 @@ sound = ExtResource("15_t7ogt")
 visible = false
 
 [node name="WinScreen" parent="." instance=ExtResource("17_5vv12")]
+visible = false
+
+[node name="TitleScreen" parent="." instance=ExtResource("20_w8qn1")]
 visible = false
 
 [connection signal="ingredient_added" from="Cauldron" to="." method="_on_cauldron_ingredient_added"]
@@ -104,3 +113,5 @@ visible = false
 [connection signal="container_selected" from="ContainersOnTable/Container9" to="." method="_on_container_on_table_container_selected"]
 [connection signal="container_selected" from="ContainersOnTable/Container10" to="." method="_on_container_on_table_container_selected"]
 [connection signal="container_selected" from="ContainersOnTable/Container11" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container12" to="." method="_on_container_on_table_container_selected"]
+[connection signal="start_game" from="TitleScreen" to="." method="_on_title_screen_start_game"]

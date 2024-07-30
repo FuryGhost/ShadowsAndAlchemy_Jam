@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2i1rlv2184pg"
+path="res://.godot/imported/12 single coin in glass jar electric.wav-d9ff584b5ddbc214e1e7e49975066e64.sample"
+
+[deps]
+
+source_file="res://audio/container_shakes/12 single coin in glass jar electric.wav"
+dest_files=["res://.godot/imported/12 single coin in glass jar electric.wav-d9ff584b5ddbc214e1e7e49975066e64.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

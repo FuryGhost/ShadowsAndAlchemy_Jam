@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ccxmlrfwmswyf" path="res://art/containers/Container_1.png" id="1_0wbu2"]
 [ext_resource type="Script" path="res://scenes/selected_container.gd" id="1_nmwbw"]
-[ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/single coin in glass jar electric.wav" id="3_1ma7j"]
+[ext_resource type="AudioStream" uid="uid://c2i1rlv2184pg" path="res://audio/container_shakes/12 single coin in glass jar electric.wav" id="3_1ma7j"]
 [ext_resource type="Texture2D" uid="uid://dcif7avy4wxg4" path="res://art/indicators/BackArrow.png" id="4_xfrea"]
 
 [sub_resource type="Curve2D" id="Curve2D_t2mpi"]

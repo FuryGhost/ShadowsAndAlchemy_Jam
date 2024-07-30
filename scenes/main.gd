@@ -17,6 +17,8 @@ func _ready():
 	$SelectedContainer.hide()
 	$Cauldron/Area2D/CollisionShape2D.disabled = true
 	potion_ingredients.sort()
+	$ContainersOnTable.hide()
+	$TitleScreen.show()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -69,3 +71,12 @@ func _fail_game():
 	$IngredientsList.hide()
 	$Cauldron.show_failed_cauldron()
 	$FailedScreen.show()
+
+
+func _on_title_screen_start_game():
+	$Cauldron.show()
+	$SelectedContainer.hide()
+	$ContainersOnTable.show()
+	$IngredientsList.show()
+	_cauldron_contents = []
+	$TitleScreen.hide()

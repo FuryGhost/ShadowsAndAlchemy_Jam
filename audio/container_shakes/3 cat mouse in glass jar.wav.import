@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://me8y015mvnn4"
+path="res://.godot/imported/3 cat mouse in glass jar.wav-4ac3a7495681021e56e6536db8e93aed.sample"
+
+[deps]
+
+source_file="res://audio/container_shakes/3 cat mouse in glass jar.wav"
+dest_files=["res://.godot/imported/3 cat mouse in glass jar.wav-4ac3a7495681021e56e6536db8e93aed.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
