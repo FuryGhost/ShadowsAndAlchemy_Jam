@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://qmor1vpqir5m"]
+[gd_scene load_steps=23 format=3 uid="uid://qmor1vpqir5m"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_lrgdy"]
 [ext_resource type="PackedScene" uid="uid://beeqb3debqxk3" path="res://scenes/selected_container.tscn" id="3_iod7s"]
@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://u6gyyt7mpy40" path="res://audio/container_shakes/11 little citrus in glass jar.wav" id="15_4mruf"]
 [ext_resource type="PackedScene" uid="uid://cyrcxtua6vvvm" path="res://scenes/win_screen.tscn" id="17_5vv12"]
 [ext_resource type="PackedScene" uid="uid://c0tvkw3m0w3ey" path="res://scenes/failed_screen.tscn" id="17_7ytvs"]
+[ext_resource type="AudioStream" uid="uid://cbnjrsx8nxxxt" path="res://audio/container_shakes/13 p.wav" id="18_dicso"]
 [ext_resource type="PackedScene" uid="uid://c55xavh00468w" path="res://scenes/ingredients_list.tscn" id="18_rvy5r"]
 [ext_resource type="PackedScene" uid="uid://d1fymydnkhpkn" path="res://scenes/title_screen.tscn" id="20_w8qn1"]
 [ext_resource type="Texture2D" uid="uid://lue1agcq4y77" path="res://art/Background.png" id="21_icg38"]
@@ -29,6 +30,8 @@ script = ExtResource("1_lrgdy")
 position = Vector2(960, 540)
 texture = ExtResource("21_icg38")
 
+[node name="IngredientsList" parent="." instance=ExtResource("18_rvy5r")]
+
 [node name="Cauldron" parent="." instance=ExtResource("4_ivklr")]
 
 [node name="SelectedContainer" parent="." instance=ExtResource("3_iod7s")]
@@ -37,7 +40,7 @@ visible = false
 [node name="ContainersOnTable" type="Node2D" parent="."]
 
 [node name="Container1" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(667, 470)
+position = Vector2(514, 448)
 sound = ExtResource("5_7dk75")
 
 [node name="Container2" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
@@ -86,7 +89,7 @@ container_index = 10
 sound = ExtResource("14_jft1m")
 
 [node name="Container11" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
-position = Vector2(560.427, 774.929)
+position = Vector2(623, 735)
 container_index = 11
 sound = ExtResource("15_4mruf")
 
@@ -95,7 +98,10 @@ position = Vector2(1244, 446)
 container_index = 12
 sound = ExtResource("5_v14fl")
 
-[node name="IngredientsList" parent="." instance=ExtResource("18_rvy5r")]
+[node name="Container13" parent="ContainersOnTable" instance=ExtResource("4_1ldp7")]
+position = Vector2(1738, 168)
+container_index = 13
+sound = ExtResource("18_dicso")
 
 [node name="FailedScreen" parent="." instance=ExtResource("17_7ytvs")]
 visible = false
@@ -120,4 +126,5 @@ visible = false
 [connection signal="container_selected" from="ContainersOnTable/Container10" to="." method="_on_container_on_table_container_selected"]
 [connection signal="container_selected" from="ContainersOnTable/Container11" to="." method="_on_container_on_table_container_selected"]
 [connection signal="container_selected" from="ContainersOnTable/Container12" to="." method="_on_container_on_table_container_selected"]
+[connection signal="container_selected" from="ContainersOnTable/Container13" to="." method="_on_container_on_table_container_selected"]
 [connection signal="start_game" from="TitleScreen" to="." method="_on_title_screen_start_game"]

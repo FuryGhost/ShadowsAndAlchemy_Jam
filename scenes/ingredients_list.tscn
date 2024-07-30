@@ -9,8 +9,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = 64.0
 offset_top = 56.0
-offset_right = 603.0
-offset_bottom = 559.0
+offset_right = 410.0
+offset_bottom = 427.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 1
